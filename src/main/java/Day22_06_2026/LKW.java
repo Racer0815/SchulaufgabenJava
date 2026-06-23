@@ -17,4 +17,9 @@ public class LKW extends Fahrzeug{
         return this.verbrauch;
     }
 
+    public void fahren(int km)
+    {
+
+    }
+
 }
