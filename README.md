@@ -14,7 +14,7 @@ Die Projekte sind in separates Ordner unter `src/main/java` aufgeteilt. Jeder Or
 - [Day20_07_2026](src/main/java/Day20_07_2026/) – Tierhierarchien und Vererbung
 - [Day21_07_2026](src/main/java/Day21_07_2026/) – Bibliotheksmodell mit Medien und Leser
 - [Day22_06_2026](src/main/java/Day22_06_2026/) – Fahrzeugklassen mit Vererbung
-- [Day29_09_2026](src/main/java/Day29_09_2026/) – Design Patterns (Factory, Observer) und Benutzerverwaltung
+- [Day29_09_2026](src/main/java/Day29_09_2026/) – Design Patterns, Benutzerverwaltung und Kaffeevollautomat
 
 ## Inhalte je Ordner
 
@@ -63,7 +63,26 @@ Die Projekte sind in separates Ordner unter `src/main/java` aufgeteilt. Jeder Or
 - `Observer/` – Beobachter-Muster
   - `Wetterstation.java`, `Beobachter.java`, `Aussenanzeige.java`, `Besucheranzeige.java`, `Hausmeisteranzeige.java`
 - `Benutzerverwaltung/` – Beispiel zur Benutzerverwaltung und Singleton-Pattern
+- `Kaffeevollautomat/` – Modellierung und Steuerung eines Kaffeevollautomaten
+  - `Nachricht.java` – Nachricht mit Geräte-ID und Meldungstext
+  - `Nachrichtenschlange.java` – Speichert und nummeriert die Systemnachrichten
+  - `Geraet.java` – Basisklasse für Geräte mit ID und Defektstatus
+  - `Kaffeevollautomat.java` – Kaffeeausgabe, Zutatenverbrauch und Fehlerbehandlung
+  - `KaffeevollautomatTest.java` – Testprogramm mit 30 Kaffeeausgaben
 - Fokus: Design Patterns, Entwurfsmuster und objektorientierte Strukturierung
+
+### Kaffeevollautomat
+
+Das Paket `Day29_09_2026.Kaffeevollautomat` bildet die Steuerungssoftware eines
+Kaffeevollautomaten ab. Eine Tasse Kaffee benötigt 25 Gramm Kaffeebohnen und
+bei Kaffee mit Milch zusätzlich 10 Gramm Milchpulver. Fehlende Zutaten werden
+als Nachrichten gespeichert. Nach jeder zehnten erfolgreich ausgegebenen Tasse
+wird ebenfalls eine Statusmeldung erzeugt.
+
+Der Kaffeevollautomat kann während des Betriebs mit einer Wahrscheinlichkeit
+von zwei Prozent einen Defekt am Mahlwerk melden. Nach einem solchen Defekt
+werden keine weiteren Tassen ausgegeben. Das Beispielprogramm wird über die
+Klasse `KaffeevollautomatTest` gestartet.
 
 ## Voraussetzungen
 
